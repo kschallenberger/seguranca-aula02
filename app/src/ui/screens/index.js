@@ -1,0 +1,5 @@
+export { Home } from "./home/home.screen"
+export { Login } from "./login/login.screen"
+export { Cadastro } from "./cadastro/cadastro.screen"
+export { Usuarios } from "./usuarios/usuarios.screen"
+export { EditarUsuario } from "./editar-usuario/editar-usuario.screen"

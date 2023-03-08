@@ -1,8 +1,16 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
+import { GlobalUserProvider } from './context/user/user.contex';
+import { GlobalSearchProvider } from './context/search/search.contex';
 import './App.css';
 
 function App() {
   return (
-    <h1>APP</h1>
+    <GlobalUserProvider>
+      <GlobalSearchProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </GlobalSearchProvider>
+    </GlobalUserProvider>
   );
 }
 

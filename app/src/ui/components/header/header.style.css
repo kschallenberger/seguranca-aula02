@@ -1,0 +1,85 @@
+.header__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    width: 100%;
+    background-color: #1b74e4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px 3px #00000059;
+    z-index: 99;
+    color: #fff;
+}
+
+.header__div--logo {
+    width: 50px;
+    height: 50px;
+    transition: scale 0.5s ease;
+}
+
+.header__div--logo:hover {
+    scale: 1.1;
+}
+
+.header__div--logo img {
+    width: 100%;
+    filter: invert(1);
+}
+
+.header_div--dados-usuario, .header__link--dados-usuario {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header_div--dados-usuario h1 {
+    line-height: 50px;
+    transition: scale 0.5s ease;
+}
+
+.header_div--dados-usuario h1:hover {
+    scale: 1.05;
+}
+
+.header_div--dados-usuario div {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: box-shadow 1s ease;
+}
+
+.header_div--dados-usuario div:hover {
+    box-shadow: 0 0 1px 3px #ffffff42;
+}
+
+.header_div--dados-usuario img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__link--logout {
+    color: #fff;
+    text-decoration: none;
+    margin-left: -10px;
+}
+
+.header__link, .header__link--lista-usuarios {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 20px;
+    transition: color 1s ease;
+}
+
+.header__link:hover, .header__link--lista-usuarios:hover {
+    color: #ffffffc0;   
+}

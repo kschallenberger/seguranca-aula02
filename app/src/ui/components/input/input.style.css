@@ -1,0 +1,35 @@
+.input__div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.input__div--input {
+  width: 100%;
+}
+
+.input__div label {
+  font-size: 20px;
+}
+
+.input__div--input input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  background-color: transparent;
+  border-bottom: #ffffff solid 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#comentario {
+  color: #002254;
+  height: 80px;
+  margin-bottom: -50px;
+}
