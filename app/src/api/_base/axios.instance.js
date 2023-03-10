@@ -4,5 +4,5 @@ import { API_TCC } from "../../constants";
 export const axiosInstance = axios.create({
   baseURL: API_TCC,
   withCredentials: true,
-  timeout: 5000,
+  timeout: 15000,
 });

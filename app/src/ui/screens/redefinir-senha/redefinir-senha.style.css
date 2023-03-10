@@ -1,0 +1,8 @@
+.redefinir-senha__section {
+    color: #0b2d57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

@@ -1,13 +1,12 @@
-.login__ {
-    height: 100vh;
+.esqueci-senha__ {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
-.login__section {
-    min-width: 50%;
+.esqueci-senha__section {
+    width: 60%;
     background-color: #0066ff;
     border-radius: 10px;
     display: flex;
@@ -17,7 +16,7 @@
 
 }
 
-.login__div--titulo {
+.esqueci-senha__div--titulo {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -29,8 +28,7 @@
     padding: 20px;
 }
 
-
-.login__form {
+.esqueci-senha__form {
     width: 100%;
     padding: 20px;
     gap: 10px;
@@ -39,14 +37,4 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.login__link--esqueci-senha {
-    color: #fff;
-    font-size: 18px;
-    transition: scale 1s ease;
-}
-
-.login__link--esqueci-senha:hover {
-    scale: 1.1;
 }

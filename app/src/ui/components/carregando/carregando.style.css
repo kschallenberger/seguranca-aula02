@@ -1,0 +1,28 @@
+.carregando__ {
+    width: 100%;
+    height: 100vh;
+    background-color: #134480a9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carregando__animacao {
+    width: 60px;
+    height: 60px;
+    animation: girando 2s infinite;
+
+}
+
+@keyframes girando {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

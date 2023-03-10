@@ -18,4 +18,9 @@ public class BuscaUsuarioService {
         return usuarioRepository.findById(idUsuario)
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Usuário não encontrado"));
     }
+
+    public Usuario porEmail(String email) {
+        return usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Usuário não encontrado"));
+    }
 }

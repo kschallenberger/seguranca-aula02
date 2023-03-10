@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useGlobalSearch from "../../../context/search/search.contex";
 import useGlobalUser from "../../../context/user/user.contex";
 import icone from "../../../assets/image/logo.png";
-import imgSearch from "../../../assets/image/lupa.svg";
+import { FaUserAlt } from "react-icons/fa";
 
 export function Header() {
   const [search, , handleChange] = useGlobalSearch();
@@ -24,7 +24,7 @@ export function Header() {
         <Link className="header__link--dados-usuario" to={`/`}>
           <h1>{user.nome}</h1>
           <div>
-            <img src={user.foto} alt="" />
+            {user.foto ? <img src={user.foto} alt="" /> : <FaUserAlt className="header__link--sem-img"/>}
           </div>
         </Link>
         <Link className="header__link--logout" onClick={handleClickSair}>

@@ -1,7 +1,7 @@
 import { Botao, Header } from "../../components";
 import "./usuarios.style.css";
 import { useObterListaUsuarios } from "../../../hooks";
-import imgUsuario from "../../../assets/image/img-usuario.png";
+import { FaUserAlt } from "react-icons/fa";
 import useGlobalUser from "../../../context/user/user.contex";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -21,11 +21,11 @@ export function Usuarios() {
   function renderUsuario(usuario) {
     if (usuario.id === user.id) return;
     return (
-      <div className="search__div" key={usuario.id}>
-        <div className="search__div--imagem">
-          <img src={!usuario.foto ? imgUsuario : usuario.foto} alt="" />
+      <div className="usuarios__div" key={usuario.id}>
+        <div className="usuarios__div--imagem">
+          {usuario.foto ? <img src={!usuario.foto ? FaUserAlt : usuario.foto} alt="" /> : <FaUserAlt className="usuarios__div--imagem"/>}
         </div>
-        <div className="search__div--info">
+        <div className="usuarios__div--info">
           <h1>{usuario.nome}</h1>
           <h2>{aplicaMascara(usuario.telefone)}</h2>
         </div>
@@ -55,7 +55,7 @@ export function Usuarios() {
   }
 
   return (
-    <section className="search__">
+    <section className="usuarios__">
       <Header/>
       {!listaUsuarios?.content.length ? <h1>Não há usuários para listas</h1> : null}
       {listaUsuarios?.content.map((usuario) => renderUsuario(usuario))}

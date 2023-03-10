@@ -8,8 +8,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
+import static org.springframework.http.HttpMethod.PUT;
 import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 
@@ -32,6 +32,8 @@ public class SecurityConfig {
                     .authorizeRequests()
                         .antMatchers("/*/**/publico").permitAll()
                         .antMatchers(POST, "/usuarios").permitAll()
+                        .antMatchers(POST, "/usuarios/redefinir-senha").permitAll()
+                        .antMatchers(PUT, "/usuarios/redefinir-senha").permitAll()
 
                 .and()
                     .authorizeRequests()

@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import useGlobalUser from "../../../context/user/user.contex";
 import { Header } from "../../components";
-import imgUsuario from "../../../assets/image/img-usuario.png";
 import "./home.style.css";
 import { useObterDadosUsuario } from "../../../hooks";
 import { useEffect } from "react";
-import { FaUserEdit } from "react-icons/fa";
+import { FaUserEdit, FaUserAlt } from "react-icons/fa";
+
 
 export function Home() {
   const [user, setUser] = useGlobalUser();
@@ -38,23 +38,21 @@ export function Home() {
 
     return mascaraTerceiraParte;
   }
+
   return (
     <section className="home__section">
       <Header />
       <div className="home__dados-usuario">
         <div className="home__dados-usuario--img">
-          <img
-            src={dadosUsuario?.foto ? dadosUsuario?.foto : imgUsuario}
-            alt=""
-          />
+            {dadosUsuario?.foto ? <img src={dadosUsuario?.foto} alt="" /> : <FaUserAlt className="home__dados-usuario--img"/>}
         </div>
         <div className="home__dados-usuario--infos">
           <h2>{dadosUsuario?.email}</h2>
           <h1>{dadosUsuario?.nome}</h1>
           <h3>{aplicaMascara(dadosUsuario?.telefone)}</h3>
-          <span>Data cadastro: {dadosUsuario?.criadoEm}</span>
+          <span>Data cadastro: {new Date(dadosUsuario?.criadoEm).toLocaleTimeString()} - {new Date(dadosUsuario?.criadoEm).toLocaleDateString()}</span>
           {dadosUsuario?.atualizadoEm ? (
-            <span>Última alteração: {dadosUsuario?.atualizadoEm}</span>
+            <span>Última alteração: {new Date(dadosUsuario?.atualizadoEm).toLocaleTimeString()} - {new Date(dadosUsuario?.atualizadoEm).toLocaleDateString()}</span>
           ) : null}
         </div>
         <div className="home__dados-usuario--alteracao">

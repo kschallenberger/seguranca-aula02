@@ -1,7 +1,7 @@
 import { Botao, Header, Input } from "../../components";
 import { useControleFormulario } from "../../../hooks/login/use-controle-formulario-login.hook";
 import useGlobalUser from "../../../context/user/user.contex";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./login.style.css";
 
@@ -40,6 +40,9 @@ export function Login() {
             erro={formInputsLogin.senha.erro}
             onChange={handleChangeInput}
           />
+          <Link className="login__link--esqueci-senha" to="/esqueci-senha">
+            Esqueci minha senha
+          </Link>
           <p className="erro">{formInputsLogin.erroLogin}</p>
           <Botao titulo="Confirmar" />
         </form>
